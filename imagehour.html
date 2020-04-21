@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Demo</title>
+</head>
+<body onload="startTime();">
+<img id="img1" />
+<script>
+var imgArray = new Array("https://i.ytimg.com/vi/1roy4o4tqQM/maxresdefault.jpg","https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png","https://www.kumulos.com/wp-content/uploads/2013/10/pikachu-6.png");
+var imgCount = 0;
+function startTime() {
+    if(imgCount == imgArray.length) {
+        imgCount = 0;
+    }
+    document.getElementById("img1").src = imgArray[imgCount];
+    imgCount++;
+    setTimeout("startTime()", 1000);
+}
+</script>
+</body>
+</html>
